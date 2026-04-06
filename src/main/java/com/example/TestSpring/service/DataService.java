@@ -17,7 +17,7 @@ public class DataService {
 
     private final Queue<String> idQueue = new ConcurrentLinkedQueue<>();
     private final KafkaTemplate<String, String> kafkaTemplate;
-    private final int BATCH_SIZE = 3;
+    private final int BATCH_SIZE = 100;
 
     public DataService(KafkaTemplate<String, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
